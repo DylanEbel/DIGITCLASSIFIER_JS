@@ -1,0 +1,107 @@
+:root {
+    --cell-size: 16px;
+    background-color: #fff0eb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tile {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    box-sizing: border-box;
+    background-color: white;
+    user-select: none;
+    
+}
+
+/* #board-holder {
+    width: calc(--cell-size * 28px);
+    height: calc(--cell-size * 28px);
+} */
+
+#tile-board {
+    display: grid;
+    margin: 0 auto 0 auto;
+    grid-template-columns: repeat(28, var(--cell-size));
+    border: 2px solid black;
+    grid-template-rows: repeat(28, var(--cell-size));
+
+    width: calc(28 * var(--cell-size));
+    height: calc(28 * var(--cell-size));
+}
+
+header {
+    margin: 80px auto 50px auto;
+    text-align: center;
+}
+
+header h1 {    
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+#author {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: -40px;
+    margin-bottom: 80px;
+    font-size: 18px;
+}
+
+#author a {
+    color: black;
+    font-weight: bold;
+}
+
+#center {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#output h2 {
+    font-size: 40px;
+}
+
+#output address h1 {
+    font-size: 120px;
+    height: 100px;
+    margin-bottom: 120px;
+    margin-top: 40px;
+}
+
+#output address p {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: light;
+}
+
+#forms {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 100px;
+}
+
+button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: none;
+    color: #fff0eb;
+    background-color: rgb(39, 3, 34);
+}
+
+button:hover {
+    box-shadow: 0 4px 12px black;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=W, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Digit Classifier</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1 id="title">Digit Classifier</h1>
+        <div id="author">
+          <p>By:</p>
+          <a href="https://github.com/DylanTheVillain45">Dylan Ebel</a>
+        </div>
+      </header>
+
+      <div id="center">
+          <div id="tile-board"></div>
+          <div id="output">
+            <h2>Prediction</h2>
+            <address>
+              <h1 id="output-text"></h1>
+              <p id="confidence-text">Confidence: </p>
+            </address>
+        <!-- <div id="bottom">
+          <div id="guess-area">
+
+          </div>
+        </div> -->
+        </div>
+      </div>
+      <div id="forms">
+        <!-- <div id="size-change">
+          Tile Size
+          <div>
+            <input type="range" id="size-slider" min="10" max="20" value="15" />
+            <p id="size-indicator"></p>
+          </div>
+        </div> -->
+        <div id="reset">
+          <button id="reset-button">Reset</button>
+        </div>
+        <div id="random">
+          <button id="random-button">Random</button>
+        </div>
+        <div id="run">
+          <button id="run-button">Run</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" async src="./scripts/script.js"></script>
+  </body>
+</html>
