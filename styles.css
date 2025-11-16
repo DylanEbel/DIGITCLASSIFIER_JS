@@ -1,16 +1,21 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
-    --cell-size: 16px;
-    background-color: #fff0eb;
-    font-family: Arial, Helvetica, sans-serif;
+  --cell-size: 16px;
+  background-color: #fff0eb;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .tile {
-    width: var(--cell-size);
-    height: var(--cell-size);
-    box-sizing: border-box;
-    background-color: white;
-    user-select: none;
-    
+  width: var(--cell-size);
+  height: var(--cell-size);
+  box-sizing: border-box;
+  background-color: white;
+  user-select: none;
 }
 
 /* #board-holder {
@@ -18,7 +23,95 @@
     height: calc(--cell-size * 28px);
 } */
 
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+#author {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -40px;
+  margin-bottom: 80px;
+  font-size: 18px;
+}
+
+#author a {
+  color: black;
+  font-weight: bold;
+}
+
+#forms {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 100px;
+}
+
 #tile-board {
+  display: grid;
+  margin: 0 auto 0 auto;
+  grid-template-columns: repeat(28, var(--cell-size));
+  border: 2px solid black;
+  grid-template-rows: repeat(28, var(--cell-size));
+
+  width: calc(28 * var(--cell-size));
+  height: calc(28 * var(--cell-size));
+}
+
+#center {
+  display: flex;
+  flex-direction: row;
+}
+
+#output {
+  /* width: calc(29 * var(--cell-size)); */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#output h2 {
+  font-size: 40px;
+}
+
+#output address h1 {
+  font-size: 120px;
+  height: 100px;
+  margin-bottom: 120px;
+  margin-top: 40px;
+}
+
+#output address p {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: light;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 40px;
+  }
+  :root {
+    max-width: 100%;
+    --cell-size: 12px;
+    background-color: #fff0eb;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #center {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tile-board {
     display: grid;
     margin: 0 auto 0 auto;
     grid-template-columns: repeat(28, var(--cell-size));
@@ -27,81 +120,57 @@
 
     width: calc(28 * var(--cell-size));
     height: calc(28 * var(--cell-size));
-}
+  }
 
-header {
-    margin: 80px auto 50px auto;
+  #output {
+    width: 80%;
+    margin-top: 20px;
     text-align: center;
-}
+  }
 
-header h1 {    
-    font-size: 50px;
-    text-decoration: underline;
-}
+  #output h2 {
+    font-size: 24px;
+  }
 
-#author {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: -40px;
-    margin-bottom: 80px;
-    font-size: 18px;
-}
+  #output address h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
 
-#author a {
-    color: black;
-    font-weight: bold;
-}
+  #output address p {
+    font-size: 16px;
+    display: none;
+  }
 
-#center {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    justify-content: center;
-    /* align-items: center; */
-}
-
-#output {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#output h2 {
-    font-size: 40px;
-}
-
-#output address h1 {
-    font-size: 120px;
-    height: 100px;
-    margin-bottom: 120px;
-    margin-top: 40px;
-}
-
-#output address p {
-    font-style: italic;
-    font-size: 20px;
-    font-weight: light;
-}
-
-#forms {
+  #forms {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin-top: 100px;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 button {
-    border: none;
-    padding: 12px 24px;
-    font-size: 20px;
-    transition: box-shadow 0.3s ease;
-    box-shadow: none;
-    color: #fff0eb;
-    background-color: rgb(39, 3, 34);
+  border: none;
+  padding: 12px 24px;
+  font-size: 20px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: none;
+  color: #fff0eb;
+  background-color: rgb(39, 3, 34);
 }
 
 button:hover {
-    box-shadow: 0 4px 12px black;
+  box-shadow: 0 4px 12px black;
+}
+html, body {
+  margin: 0;              /* important: removes default 8px margin */
+  max-width: 100%;
+  overflow-x: hidden;
 }

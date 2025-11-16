@@ -2,7 +2,7 @@ import { Board } from "./board.js"
 import { DigitClassifier } from "./DigitClassifier.js";
 
 const board = new Board()
-const digitClassifier = new DigitClassifier("https://dylanthevillain45.github.io/DigitClassifierWeights/")
+const digitClassifier = new DigitClassifier("https://dylanebel.github.io/DigitClassifierWeights/")
 
 // const widthIndicator = document.getElementById("size-indicator");
 // const widthSlider = document.getElementById("size-slider");
